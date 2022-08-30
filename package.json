@@ -1,0 +1,15 @@
+{
+  "name": "free-utils",
+  "version": "1.0.0",
+  "description": "a library for som functions, make coding more free",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "rm -rf lib && tsc --build"
+  },
+  "keywords": [
+    "utils"
+  ],
+  "author": "zml",
+  "license": "ISC"
+}
