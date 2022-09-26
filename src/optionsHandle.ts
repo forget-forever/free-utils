@@ -18,6 +18,8 @@ function handleToValueEnum(list: string[] | Record<string, string | number>): Re
  */
 function handleToValueEnum<V extends string, L extends string>(list: Record<V | L, string | number>[], valueKey?: V, labelKey?: L ): ResValueType;
 
+function  handleToValueEnum<V extends string, L extends string>(list: ValueType<V, L>, valueKey?: V, labelKey?: L): ResValueType;
+
 /**
  * 整个数据，将无序的数据整合成映射map
  * @param list 无序的数据
