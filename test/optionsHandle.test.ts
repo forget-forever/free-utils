@@ -1,6 +1,3 @@
-// const { expect, describe, test } = require("@jest/globals")
-// const { optionsHandle } = require('../src/index')
-
 import { describe, test, expect } from "@jest/globals";
 import { optionsHandle } from "../src";
 

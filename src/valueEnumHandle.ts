@@ -3,12 +3,12 @@
  * @param valueEnum 
  * @returns 
  */
-const valueEnumHandle = (valueEnum: string[] | Record<string, string> | Record<'label' | 'value', string>[]) => {
-  let options: Record<'label' | 'value', string>[] = [];
+const valueEnumHandle = (valueEnum: string[] | Record<string, string | number> | Record<'label' | 'value', string>[]) => {
+  let options: Record<'label' | 'value', string | number>[] = [];
   /** 不是数组，是Record<string, string> 形式的 */
   if (valueEnum && !Array.isArray(valueEnum)) {
     Object.entries(valueEnum).forEach(([value, label]) => {
-      if (['全部', '全选', '不限'].includes(label)) {
+      if (['全部', '全选', '不限', 'All', 'all', 0].includes(label)) {
         options.unshift({ value, label });
       } else {
         options.push({ value, label });
