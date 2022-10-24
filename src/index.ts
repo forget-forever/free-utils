@@ -10,4 +10,6 @@ export { default as valueEnumHandle } from './valueEnumHandle'
 
 export { default as pick  } from "./pick"
 
+export { default as filterObj } from "./filterObj"
+
 export * from "./type"

@@ -36,14 +36,28 @@ const selectFiles = (options?: {
   if (preReject) {
     preReject();
   }
-  return new Promise<FileList>((resolve, reject) => {
+  return new Promise<FileList>((resolveSource, rejectSource) => {
     
     let input = document.createElement('input');
     input.setAttribute('type', 'file');
     input.setAttribute('multiple', 'multiple');
     input.accept = accept;
 
+    preReject = rejectSource;
 
+    const resolve: typeof resolveSource = (...args) => {
+      /** 这时候可以把之前的改成null */
+      preReject = null
+      return resolveSource(...args)
+    }
+
+    const reject: typeof rejectSource = (...args) => {
+      /** 这时候可以把之前的改成null */
+      preReject = null
+      return rejectSource(...args)
+    }
+
+    
     const changeHandle = (e: Event) => {
       let resSig = true;
       const {files: filesSource = []} = (e.target || {}) as HTMLInputElement;
@@ -72,9 +86,7 @@ const selectFiles = (options?: {
       }
     };
 
-
     input.addEventListener('change', changeHandle, false);
-    preReject = reject;
     input.click();
   });
 };
