@@ -12,4 +12,6 @@ export { default as pick  } from "./pick"
 
 export { default as filterObj } from "./filterObj"
 
+export { default as stringifyHandle } from "./stringifyHandle"
+
 export * from "./type"
