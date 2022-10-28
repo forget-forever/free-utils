@@ -14,4 +14,6 @@ export { default as filterObj } from "./filterObj"
 
 export { default as stringifyHandle } from "./stringifyHandle"
 
+export { default as downloadFile } from "./downloadFile"
+
 export * from "./type"
