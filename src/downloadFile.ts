@@ -9,7 +9,7 @@ const download = (urls: string, fileName: string) => {
     a.target = '_blank'
     a.download = fileName;
     a.style.display = 'none'
-    document.body.append(a)
+    // document.body.append(a)
     a.click();
   };
   x.send();
