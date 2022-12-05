@@ -18,4 +18,8 @@ describe('stringify any value', () => {
     expect(stringifyHandle('1234')).toEqual('1234')
   })
 
+  test('it will stringify when input an array', () => {
+    expect(stringifyHandle(arr)).toEqual(JSON.stringify(arr))
+  })
+
 })

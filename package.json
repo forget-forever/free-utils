@@ -1,18 +1,23 @@
 {
   "name": "free-utils",
-  "version": "1.1.11",
+  "version": "1.1.12",
   "description": "a library for som functions, make coding more free",
   "main": "lib/index.js",
   "files": [
     "lib"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/forget-forever/free-utils"
+  },
   "type": "module",
   "types": "lib/index.d.ts",
   "typings": "lib/index.d.ts",
   "scripts": {
     "test": "jest",
     "build": "rm -rf lib && tsc --build",
-    "release": "npm run build && npm publish"
+    "docs": "typedoc src/index.ts",
+    "release": "npm run build && npm run docs && npm publish"
   },
   "keywords": [
     "utils"
