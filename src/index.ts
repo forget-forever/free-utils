@@ -16,4 +16,6 @@ export { default as stringifyHandle } from "./stringifyHandle"
 
 export { default as downloadFile } from "./downloadFile"
 
+export { default as generateOption } from "./generateOption"
+
 export * from "./type"
