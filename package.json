@@ -1,10 +1,12 @@
 {
   "name": "free-utils",
-  "version": "1.1.12",
+  "version": "1.1.13",
   "description": "a library for som functions, make coding more free",
   "main": "lib/index.js",
+  "module": "es/index.js",
   "files": [
-    "lib"
+    "lib",
+    "es"
   ],
   "repository": {
     "type": "git",
@@ -15,7 +17,7 @@
   "typings": "lib/index.d.ts",
   "scripts": {
     "test": "jest",
-    "build": "rm -rf lib && tsc --build",
+    "build": "rm -rf lib && rm -rf es && tsc --build && tsc --module ES2015 --outDir es",
     "docs": "typedoc src/index.ts",
     "release": "npm run build && npm run docs && npm publish"
   },
