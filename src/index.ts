@@ -18,4 +18,6 @@ export { default as downloadFile } from "./downloadFile"
 
 export { default as generateOption } from "./generateOption"
 
+export * from "./namepathHandle"
+
 export * from "./type"
