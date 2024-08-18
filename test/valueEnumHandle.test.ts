@@ -15,4 +15,11 @@ describe('将键值对，字符串数组转换成label，value这样的options�
     ])
   })
 
+  test('to options array number', () => {
+    expect(valueEnumHandle(obj, {valueToNumber: true})).toEqual([
+      { value: 1, label: 'key1' },
+      { value: 2, label: 'key2' }
+    ])
+  })
+
 })

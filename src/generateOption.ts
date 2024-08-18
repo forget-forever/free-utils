@@ -43,7 +43,10 @@ export function generateOption<
 >(
   value: V,
   label?: L,
-  config?: { labelKey?: LK, valueKey?: VK,  }
+  config?: {
+    labelKey?: LK,
+    valueKey?: VK,
+  }
 ){
   const { labelKey = 'label' as 'label', valueKey = 'value' as 'value' } = config || {}
 
