@@ -1,6 +1,6 @@
 {
   "name": "free-utils",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "a library for som functions, make coding more free",
   "main": "lib/index.js",
   "module": "es/index.js",
