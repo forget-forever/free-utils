@@ -23,3 +23,13 @@ describe('stringify any value', () => {
   })
 
 })
+
+describe('stringify the non object value', () => {
+  test('returns a number as it is', () => {
+    expect(stringifyHandle(123)).toEqual(123)
+  })
+
+  test('returns null as it is', () => {
+    expect(stringifyHandle(null)).toEqual(null)
+  })
+})

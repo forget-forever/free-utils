@@ -12,3 +12,18 @@ describe('extract number in a string', () => {
     expect(getNumber(stringTest, true)).toEqual(123)
   })
 })
+
+describe('the edge cases of the getNumber', () => {
+  test('returns a number as it is', () => {
+    expect(getNumber(12)).toEqual(12)
+  })
+
+  test('keeps the number as a string when mustNum is false', () => {
+    expect(getNumber('a1b2', false)).toEqual('12')
+  })
+
+  test('returns an empty string when there is no number', () => {
+    expect(getNumber('none')).toEqual('')
+    expect(getNumber('none', true)).toEqual(0)
+  })
+})

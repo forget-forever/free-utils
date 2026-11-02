@@ -21,3 +21,13 @@ describe('generate option object', () => {
 
 
 })
+
+describe('generate option object with the default label', () => {
+  test('use the value as the label when the label is undefined', () => {
+    expect(generateOption(1)).toEqual({ value: 1, label: 1 })
+  })
+
+  test('only custom the label key', () => {
+    expect(generateOption(1, 'one', { labelKey: 'text' })).toEqual({ value: 1, text: 'one' })
+  })
+})
